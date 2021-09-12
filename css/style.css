@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+.menu {
+    width: 100vw;
+    background-color: #363636;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu span {
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-list li {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-list li:hover {
+    color: #918c8c;
+    transition: color 0.3s ease-in-out;
+}
+
+.form-simulado {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 40%);
+    background: #fff;
+    width: 250px;
+    padding: 10px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    backdrop-filter: 15px;
+    text-align: center;
+    z-index: 1;
+}
+
+.form-simulado h2 {
+    padding: 10px;
+}
+
+.form-simulado h2::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    margin-top: 27px;
+    background-color: red;
+}
+
+.contato {
+    position: absolute;
+    margin: 10px;
+    width: 300px;
+    background-color: rgb(236, 216, 216);
+    padding: 10px;
+    right: 10px;
+
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    -webkit-transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+    z-index: 1;
+    display: none;
+
+}
+
+.contato .contato-sair {
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.contato span:hover {
+    font-weight: bold;
+    color: #363636;
+}
+
+.contato::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: rgb(236, 216, 216);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -5px;
+    right: 10px;
+}
+
+.contato:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.contato-avatar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    border: solid 1px #ccc;
+    padding: 10px;
+}
+
+.contato-avatar:hover {
+    background-color: #ccc;
+    opacity: 0.9;
+}
+
+.contato-avatar .avatar-descricao {
+    width: 65%;
+}
+
+.contato-avatar p {
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.contato-avatar .links-repositorio {
+    height: 60px;
+}
+
+.contato-avatar .links-repositorio img {
+    width: 20px;
+    cursor: pointer;
+} 
+
+.contato-avatar .links-repositorio img:hover {
+    opacity: 0.8;
+}
+
+.avatar:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #fff;
+    background: url('/img/2.jpg');
+    background-size: cover;
+    margin: 0 10px 0 0;
+}
+
+
+
+#resultado {
+    width: 90vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.card {
+    width: 220px;
+    position: relative;
+    margin: 10px;
+    padding: 10px 0;
+}
+
+.card span {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.card p {
+    text-align: justify;
+    font-size: 12px;
+    padding: 10px 0;
+    align-items: stretch;
+}
+
+.card-img {
+    max-width: 220px;
+}
+
+.card-edit, .card-delete {
+    position: absolute;
+    top: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-edit:hover, .card-delete:hover {
+    opacity: 0.9;
+    transform: scale(0.9);
+}
+
+.card-edit {
+    right: 25px;
+    margin-right: 5px;
+    width: 20px;
+}
+
+.card-delete {
+    right: 5px;
+    margin-left: 5px;
+    width: 15px;
+}
+
+#btnSubmit {
+    background-color: rgb(69, 93, 167);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #FFF;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+#btnSubmit:hover, #btnCancelar:hover {
+    background-color: #ccc;
+    color: rgb(69,93,167);
+}
+
+#btnCancelar {
+    background-color: rgb(69, 93, 167);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #FFF;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.float-label{
+    position: relative;
+    padding-top: 13px;
+    padding-bottom: 20px;
+    display: inline-block;
+  }
+  
+.float-label input{
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -webkit-appearance:none;
+    border-radius: 0;
+}
+  
+.float-label input:focus{
+    border-bottom: 2px solid lightgrey;
+}
+  
+.float-label input::placeholder{
+    color: transparent;
+}
+  
+.float-label label{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+}
+  
+.float-label input:required:invalid + label{
+    color: red;
+}
+.float-label input:focus:required:invalid{
+    border-bottom: 2px solid lightgrey;
+}
+
+/* .float-label input:required:invalid + label:before{
+    content: '*';
+} */
+  
+.float-label input:focus + label,
+.float-label input:not(:placeholder-shown) + label{
+    font-size: 13px;
+    margin-top: 0;
+    color: #060d25;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+    background-color: #363636;
+    padding: 10px;
+}
