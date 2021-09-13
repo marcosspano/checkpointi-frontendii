@@ -89,8 +89,15 @@ menulist[1].addEventListener('click', () => {
 
 });
 
+//Botão Sair - Oculta menu de contato
 document.querySelector('.contato-sair').addEventListener('click', () => {
 
     document.querySelector('.contato').style.display = "none";
 
 })
+
+//Aplica avatar nas divs como background em contato
+let avatar = document.querySelectorAll('.avatar');
+avatar[0].style.backgroundImage = "url('img/avatar_marcosspano.png')";
+avatar[1].style.backgroundImage = "url('img/avatar_gustavobittencourt.jpg')";
+avatar[2].style.backgroundImage = "url('img/avatar_caiocastro.png')";

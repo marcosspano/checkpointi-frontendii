@@ -148,18 +148,15 @@ header {
     opacity: 0.8;
 }
 
-.avatar:nth-child(1) {
+.avatar {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: 2px solid #fff;
     background-color: #fff;
-    background: url('/img/2.jpg');
     background-size: cover;
     margin: 0 10px 0 0;
 }
-
-
 
 #resultado {
     width: 90vw;
